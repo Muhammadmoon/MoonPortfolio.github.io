@@ -1,0 +1,539 @@
+/* Navbar Styles - Extreme Level */
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F7F8FC;
+}
+
+.navbar-menu a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+.navbar-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0a013f; /* Change to your desired hover color */
+  transition: width 0.6s ease;
+}
+
+.navbar-menu a:hover::after {
+  width: 100%;
+}
+
+
+
+.navbar {
+  background-color: #F7F8FC;
+  color: #333;
+  padding: 25px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 40px; /* Adjust the size as needed */
+  margin-left: 40px;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-menu li {
+  margin-right: 30px;
+}
+
+.navbar-menu li:last-child {
+  margin-right: 100px;
+}
+
+.navbar-menu a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: #2563EB;
+}
+
+.navbar-toggle {
+  display: none; /* Hide toggle icon by default */
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 10px;
+}
+
+/* Media Query for responsive design */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none; /* Hide menu items by default on smaller screens */
+  }
+
+  .navbar-toggle {
+    display: block; /* Show toggle icon on smaller screens */
+  }
+
+  .navbar-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .navbar-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .navbar-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for dropdown */
+    border-radius: 5px; /* Add some rounding for a modern look */
+  }
+
+  .navbar-menu.active li {
+    margin-right: 0;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 0px solid #0d0000; /* Add separation between dropdown items */
+  }
+}
+
+/* About ME */
+.about-section {
+    padding: 130px 0; 
+    
+}
+.hey {
+    font-size: 30px;
+}
+.muhammad{
+    color: #2563EB;
+    background-color: #fff;
+}
+
+
+.bg{
+    background-color: #fff;
+}
+
+.container-section {
+    max-width: 1200px;
+    
+    padding: 0 20px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-left: 45px;
+    margin-right: 45px;
+    box-shadow:  0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+}
+
+.section-heading {
+    font-size: 36px;
+    margin-left: 50px;
+    
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    
+    background-color: #fff;
+}
+
+.profile-pic img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 20px;
+    background-color: #fff;
+}
+
+.about-intro {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.hi-icon {
+    font-size: 35px;
+    margin-right: 10px;
+    background-color: #fff;
+}
+.git{
+    font-size: 2px;
+}
+.link{
+    font-size: 10px;
+}
+.about-description {
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: #fff;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+    }
+   
+    .container-section {
+    padding: 10;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    }
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .profile-pic img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+    .section-heading {
+        font-size: 30px;
+        margin-left: 10px;
+        
+    }
+    .about-description {
+        font-size: 16px;
+        line-height: 1.4;
+        
+    }
+
+    .about-intro {
+        flex-direction: column; /* Change to column layout on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+
+
+    }
+
+
+    .hi-icon {
+        margin-left: 120px; /* Add some space between "Muhammad" and the icon */
+    }
+}
+
+/* icons */
+
+.social-icons {
+    text-align: left;
+}
+
+.social-icons ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #fff;
+}
+
+.social-icons ul li {
+    display: inline-block;
+    margin: 0 10px;
+    background-color: #fff;
+}
+
+.icon-container {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Ensure the container is a perfect circle */
+    overflow: hidden; /* Hide any overflow content */
+    background-color: #fff;
+    position: relative; /* Added */
+    border: 2px solid #d0cccc; /* Add a circular border */
+    padding: 5px;
+}
+.project-icon-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Ensure the container is a perfect circle */
+  overflow: hidden; /* Hide any overflow content */
+  background-color: #fff;
+  position: relative; /* Added */
+  border: 2px solid #d0cccc; /* Add a circular border */
+  padding: 5px;
+}
+
+.icon-container:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Change opacity as needed */
+    z-index: 1; /* Ensure it's above the icon */
+}
+
+.icon-container:hover .icon {
+    transform: scale(1.1); /* Change scale factor as needed */
+    
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #fff;
+    transition: transform 0.3s ease; /* Added */
+    
+}
+
+
+
+/* Projects */
+.project-container-section {
+    flex: 1; /* Set flex to 1 to make both containers cover equal space */
+    max-width: 500px;
+    padding: 20px;
+    margin: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping for the flex items */
+    justify-content: center; /* Center the items horizontally */
+    margin: 0 -15px; /* Compensate for padding in project-container-section */
+}
+
+.project-container-section {
+    flex-basis: calc(50% - 60px); /* Adjust the width to take up half the space with some margin */
+    margin: 15px; /* Add margin to create space between items */
+}
+
+.project-about-section{
+     padding: 10px 0; 
+}
+
+/* Icon */
+.anchor-wrapper {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  padding: 10px;
+  display: inline;
+  margin-left: 10px;
+  
+}
+
+.icon-link {
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+  width: 10px;
+  height: 10px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.demo-icon{
+  margin-right: 5px;
+}
+
+/* Hover Effect */
+
+.anchor-wrapper{
+  transform: scale(1.05);
+  box-shadow: 0 2px 5px rgba(83, 80, 80, 0.2);
+}
+
+/* Reach Me Section */
+.reach-me {
+  width: 100%;
+  max-width: 1080px;
+  height: 250px;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+.logo-container {
+  display: flex;
+  background-color: #fff;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  height: 100%; /* Added to make the container expand to fill the reach-me div */
+}
+
+.logo-container a {
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.logo-container img {
+  width: 50px; /* Adjust the size of the logos as needed */
+  height: auto;
+  background-color: #fff;
+}
+.name{
+  margin-bottom: 20px;
+  background-color: #fff;
+  margin-right: 20px;
+}
+.reach-section-heading{
+  margin-top: 100px;
+  text-align: center;
+   
+}
+
+@media (max-width: 768px) {
+  .reach-me {
+  width: 90%;
+  max-width: 500px;
+  height: 200px;
+  margin: 50px 20 0px 100px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .logo-container {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .logo-container img {
+    width: 30px;
+  }
+  .logo-container a {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 0px;
+  }
+  .anchor-wrapper{
+    margin-right: 210px;
+  }
+}
+
+
+/* Footer */
+.footer {
+  background-color: #fff;
+  padding: 10px 0;
+  text-align: center;
+ 
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+  
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to next line */
+  justify-content: space-around;
+}
+
+.footer-content {
+  
+  flex: 1;
+  margin-bottom: 10px; /* Add margin between footer content */
+}
+
+.footer-content h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  margin-top: 20px;
+  color: #666;
+}
+
+.social-links {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  background-color: #fff;
+}
+
+.social-links li {
+  margin-top: 20px;
+  margin: 0 10px;
+  background-color: #fff;
+}
+
+.social-links img {
+  margin-top: 15px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Change to column layout for small screens */
+    align-items: center; /* Center items horizontally for small screens */
+  }
+
+  .footer-content {
+    text-align: center; /* Center text for small screens */
+    margin-bottom: 0; /* Remove margin between footer content for small screens */
+  }
+
+  .social-links {
+    margin-top: 10px; /* Add margin between footer content and social links for small screens */
+  }
+}
+
